@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{login.css}"/>
+</head>
+<body>
+
+            <div class="card">
+            <div class="card-header text-center" style="background-color:#007bff; color: white">
+                <h3><strong>User Login</strong></h3>
+            </div>
+            <div class="card-body" >
+                <form action="#" th:action="@{/}" th:object="${user}" method="post">
+                    <input type="text" th:field ="*{username}" class="form-control" placeholder="Username">
+                    <br>
+                    <!---->
+                    <input type="password" th:field ="*{password}" class="form-control" placeholder="Password">
+                    <br>
+                    <div class="text-center">
+                        <input type="submit" class="btn btn-primary" value="Log In">
+                    </div>
+                    <p class="text-center">Create your account <a th:href="@{/register}">Here</a></p>
+                </form>
+
+
+            </div>
+        </div>
+
+</body>
+</html>
